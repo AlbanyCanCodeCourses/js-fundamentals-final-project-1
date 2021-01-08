@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>tgi GIFs!</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <header class="logo">
+                <img
+                    onClick="window.location.reload();"
+                    src="img/logo.svg"
+                    alt="tgi GIFS! logo"
+                />
+            </header>
+
+            <section class="hero">
+                <div class="text">
+                    <h1>Work week got you down?</h1>
+                    <h2>Well... tgiGIFs!</h2>
+                    <p>
+                        Take a small break out of your day to enjoy some
+                        delightful GIFs of your choosing.
+                    </p>
+                </div>
+                <div class="gif">
+                    <img
+                        src="https://media1.tenor.com/images/24f2f57e56c092344cfa5ee23931e8b8/tenor.gif"
+                        alt="gif of a gif"
+                    />
+                </div>
+            </section>
+            <div class="internal-wrapper">
+                <section class="search">
+                    <h3>How many GIFs will soothe your soul?</h3>
+                    <form id="gif_form">
+                        <div class="button-group">
+                            <input
+                                type="radio"
+                                value="1"
+                                id="button_1"
+                                name="gif_amount"
+                                required
+                            />
+                            <label for="button_1" class="radioLabel">1</label>
+
+                            <input
+                                type="radio"
+                                value="4"
+                                id="button_4"
+                                name="gif_amount"
+                            />
+                            <label for="button_4" class="radioLabel">4</label>
+
+                            <input
+                                type="radio"
+                                value="10"
+                                id="button_10"
+                                name="gif_amount"
+                            />
+                            <label for="button_10" class="radioLabel">10</label>
+
+                            <input
+                                type="radio"
+                                value="surprise me"
+                                id="button_surprise"
+                                name="gif_amount"
+                            />
+                        </div>
+                        <h3 class="search-term">Enter a search term</h3>
+                        <input
+                            type="text"
+                            id="search_gifs"
+                            placeholder="Fun GIFs coming your way!"
+                            required
+                        />
+                        <button id="button_party" type="submit">
+                            party time!
+                        </button>
+                    </form>
+                    <div id="errors"></div>
+                </section>
+            </div>
+            <section>
+                <div class="internal-wrapper">
+                    <div id="gif_results"></div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="wrapper">
+                <div class="internal-wrapper">
+                    <p>
+                        tgi GIFs! was created by
+                        <a href="https://chailandau.com" target="_blank"
+                            >Chai Landau</a
+                        >
+                        as her final project in JavaScript Fundamentals at
+                        <a href="https://albanycancode.org/" target="_blank"
+                            >AlbanyCanCode</a
+                        >.
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
